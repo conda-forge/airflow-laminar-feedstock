@@ -15,10 +15,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=26747&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/airflow-laminar-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/airflow-laminar-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/airflow-laminar-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -41,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `airflow-laminar` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install airflow-laminar
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install airflow-laminar
 ```
 
-It is possible to list all of the versions of `airflow-laminar` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add airflow-laminar
+# for installing globally
+pixi global install airflow-laminar
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `airflow-laminar` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search airflow-laminar --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search airflow-laminar --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search airflow-laminar --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -77,6 +120,8 @@ mamba repoquery whoneeds airflow-laminar --channel conda-forge
 # List dependencies of `airflow-laminar`:
 mamba repoquery depends airflow-laminar --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
